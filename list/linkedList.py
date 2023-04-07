@@ -10,6 +10,7 @@ class LinkedList:
         if self.head is None:
             self.head = node
             print(self.head.value)
+            ##
         else:
             currentNode = self.head
             while(currentNode.next):
