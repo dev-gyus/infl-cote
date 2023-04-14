@@ -16,7 +16,6 @@ class LinkedList:
                 currentNode = currentNode.next
             currentNode.next = node
             print(currentNode.next.value)
-            #;;;;
     def __str__(self):
         result = '['
         if self.head is not None:
