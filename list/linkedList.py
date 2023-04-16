@@ -27,7 +27,6 @@ class LinkedList:
             result += buffer.rstrip(",")
         result += "]"
         return result
-    #;;;
 
 
 ll = LinkedList()
