@@ -1,3 +1,4 @@
+# 링크드 리스트에 들어갈 노드 클래스
 class ListNode(object):
     def __init__(self, prev_node, url, next_node):
         self.url = url
