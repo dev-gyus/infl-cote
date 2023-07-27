@@ -5,7 +5,6 @@ class ListNode(object):
         self.prev_node = prev_node
         self.next_node = next_node
 
-#
 class BrowserHistory(object):
     def __init__(self, homepage):
         self.current = ListNode(None, homepage, None)
