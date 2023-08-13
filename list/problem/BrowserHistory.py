@@ -10,7 +10,7 @@ class BrowserHistory(object):
         self.current = ListNode(None, homepage, None)
         self.head = self.current
         self.tail = self.current
-#
+
     def visit(self, url):
         newNode = ListNode(self.current, url, None)
         self.current.next_node = newNode
