@@ -15,10 +15,8 @@ def twoSum(nums, target):
     while l < r:
         if (nums[l] + nums[r]) > target:
             r -= 1
-            print(f"l={l}, r={r}")
         elif (nums[l] + nums[r]) < target:
             l += 1
-            print(f"l={l}, r={r}")
         else:
             return True
     return False
