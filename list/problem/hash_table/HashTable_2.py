@@ -25,5 +25,5 @@ def solution(nums: [int]) -> int:
 
 
 if __name__ == '__main__':
-    nums = [2, 5, 4, 3, 1, 7, 9, 8, 6, 7, 8, 10, 1, 13, 100, 200]
+    nums = [2, 5, 4, 3, 1, 7, 9, 8, 6, 7, 8, 10, 1, 13, 100, 200, 67]
     print(solution(nums))
