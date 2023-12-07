@@ -57,6 +57,6 @@ def solution_n(nums: [int]):
 
 
 if __name__ == '__main__':
-    nums = [2, 5, 4, 3, 7, 9, 8, 6, 7, 8, 10, 12, 15, 14, 13, 11, 100, 200]
+    nums = [2, 5, 4, 3, 7, 9, 8, 6, 7, 8, 10, 12, 15, 14, 13, 11, 100]
     # print(solution_nlogn(nums))
     print(solution_n(nums))
