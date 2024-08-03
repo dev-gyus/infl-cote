@@ -20,21 +20,9 @@ def lca(root, p, q) :
     # right 노드측 dfs 순회 해서 값 확인
     right = lca(root.right, p, q)
     # 3. 만약 왼쪽과 오른쪽 노드가 모두 값이 있다면 자기 자신을 반환
-    if left is not None and right is not None: return root
+    if left and right : return root
     # 4. 만약 왼쪽 혹은 오른쪽 한쪽만 값이 있다면 값이 있는 쪽의 노드 반환
-    if left is not None and right is None: return left
-    if right is not None and left is None: return right
-
-
-
-
-
-
-
-
-
-
-
+    return left or right
 
 
 if __name__ == '__main__' :
