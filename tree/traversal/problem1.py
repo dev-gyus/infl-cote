@@ -11,17 +11,17 @@ else:
 
 #dfs 이용해서 p, q 가장 낮은 레벨의 공통 조상 탐색해보기
 def lca(root, p, q) :
-    # 자기 자신이 없거나 p, q값이 없으면 return none
+    # 1. 자기 자신이 없거나 p, q값이 없으면 return none
     if root is None or p is None or q is None: return None
-    # 현재 자기 자신의 값이 p or q인경우 자기 자신 리턴
+    # 2. 현재 자기 자신의 값이 p or q인경우 자기 자신 리턴
     if root.value is p or root.value is q: return root
     # left 노드측 dfs 순회 해서 값 확인
     left = lca(root.left, p, q)
     # right 노드측 dfs 순회 해서 값 확인
     right = lca(root.right, p, q)
-    # 만약 왼쪽과 오른쪽 노드가 모두 값이 있다면 자기 자신을 반환
+    # 3. 만약 왼쪽과 오른쪽 노드가 모두 값이 있다면 자기 자신을 반환
     if left is not None and right is not None: return root
-    # 만약 왼쪽 혹은 오른쪽 한쪽만 값이 있다면 값이 있는 쪽의 노드 반환
+    # 4. 만약 왼쪽 혹은 오른쪽 한쪽만 값이 있다면 값이 있는 쪽의 노드 반환
     if left is not None and right is None: return left
     if right is not None and left is None: return right
 
