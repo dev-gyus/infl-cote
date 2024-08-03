@@ -1,22 +1,37 @@
 from collections import deque
 
-from ..node import Node
+if __package__ is None:
+    import sys
+    from os import path
+    print(path.dirname( path.dirname( path.abspath(__file__) ) ))
+    sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ))
+    from tree.node import Node
+else:
+    from ..node import Node
 
-#dfs 이용해서 p, q 공통 조상 탐색해보기
-def traversal(root, p, q) :
+#dfs 이용해서 p, q 가장 낮은 레벨의 공통 조상 탐색해보기
+def lca(root, p, q) :
+    # 자기 자신이 없거나 p, q값이 없으면 return none
     if root is None or p is None or q is None: return None
-    if root.val == p or root.val == q:
-        return root
-    pParents = []
-    sub_traversal(root.left, p)
-    sub_traversal(root.right, p)
-    sub_traversal(root.left, q)
-    sub_traversal(root.right, q)
+    # 현재 자기 자신의 값이 p or q인경우 자기 자신 리턴
+    if root.value is p or root.value is q: return root
+    # left 노드측 dfs 순회 해서 값 확인
+    left = lca(root.left, p, q)
+    # right 노드측 dfs 순회 해서 값 확인
+    right = lca(root.right, p, q)
+    # 만약 왼쪽과 오른쪽 노드가 모두 값이 있다면 자기 자신을 반환
+    if left is not None and right is not None: return root
+    # 만약 왼쪽 혹은 오른쪽 한쪽만 값이 있다면 값이 있는 쪽의 노드 반환
+    if left is not None and right is None: return left
+    if right is not None and left is None: return right
 
-def sub_traversal(node, target) :
-    if node is None: return None
-    if node.val == target:
-        return node
+
+
+
+
+
+
+
 
 
 
@@ -32,3 +47,5 @@ if __name__ == '__main__' :
     tree.right = Node(value = 1)
     tree.right.left = Node(value = 0)
     tree.right.right = Node(value = 8)
+
+    print(lca(tree, 8, 1).value)
