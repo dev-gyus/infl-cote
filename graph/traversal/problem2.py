@@ -3,6 +3,7 @@
 # 그냥 bfs로 푸는게 효율적 (한 사이클에 모든 방향을 탐색할 수 있기 때문)
 from collections import deque
 
+#asdf
 #문제에서 grid의 x,y 길이는 동일함
 def calculate(grid) :
     if len(grid) == 1 : return 1
