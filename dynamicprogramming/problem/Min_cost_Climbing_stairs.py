@@ -3,6 +3,7 @@
 # 2<=n<=1000
 
 # 아래 dfs를 하게되면 O(n^2)으로 최대 2^1000이 가능하기때문에 timeout 발생 => Memoization을 사용한 DP를 이용해 문제해결
+# 풀이
 def brute_force_solve(cost):
     return brute_force_dfs(len(cost), cost)
 
