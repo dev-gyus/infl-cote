@@ -3,7 +3,7 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.9 (idid-baund-batch-dormant-member)" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="Python 3.9 (idid-baund-batch-dormant-member)" project-jdk-type="Python SDK">
-    <output url="file://$PROJECT_DIR$/out" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="Python 3.9" project-jdk-type="Python SDK">
+    <output url="file://$PROJECT_DIR$/../../인강/infCote/out" />
   </component>
 </project>
